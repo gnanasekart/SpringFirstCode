@@ -1,0 +1,29 @@
+In JVM there is a place called IoC Container which is created in JVM Heap memory used to initialize, managing and destroying the object creation.
+Application Context is the type of IoC Container
+
+Dependency Injection in three different way
+1. field injection
+@Autowired
+Student s;
+
+2. Constructor
+3. Setter
+
+web application will have two main parts
+
+client <------------> Server
+
+server contains three main parts
+Controller <---> Service layer <----> repo(database)
+
+these three layers are like three class
+
+------------------
+IoC - Inversion of Control
+
+IoC and Dependency Injection
+
+in Spring object == bean
+Application context also called as bean factory
+
+
