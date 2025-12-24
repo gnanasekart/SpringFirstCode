@@ -46,3 +46,18 @@ and give the ref attribute with the bean id of the class type
 -> using interface reference to refer the object of implementation class
 -> we can change the implementation class object without changing the code where it is used
 -> we can achieve loose coupling using Dependency Injection
+
+
+## Autowire
+-> it is used for automatic dependency injection
+-> it can be used with field, constructor and setter method
+-> It can be called ByType and ByName
+-> ByType: when there is only one bean of that type in the container
+-> ByName: when there are multiple beans of that type in the container
+
+this autowire feature can be enabled in xml file using keyword autowire="byName" or "byType" in the bean tag
+-> when we use autowire byName, the name of the bean id should be same as the name of the field or setter method
+-> when we use autowire byType, there should be only one bean of that type in the container otherwise it will throw exception
+   -> If there are multiple beans of that type in the container, we can use Primary param in bean tag to tell spring to use that bean as default
+
+

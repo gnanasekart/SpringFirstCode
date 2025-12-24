@@ -6,7 +6,7 @@
     <bean id="helloWorld1" class="org.example.Student">
     </bean>
 
-    <bean id="helloWorld2" class="org.example.Student">
+    <bean id="helloWorld2" class="org.example.Student" autowire="byType">
 <!--        <property name="age" value="25"/>-->
 <!--        <property name="rollNo" value="101"/>-->
 <!--        <property name="pen" ref="p1"/>-->
@@ -18,7 +18,19 @@
         Writer writer = new Pen();
         Interface type receiving the Impl object
         -->
-        <property name="writer" ref="p1"/>
+<!--   <property name="writer" ref="p1"/>-->
+    </bean>
+
+    <!-- autowire="byName" If the writer id is missing.
+    NullPointerException = Cannot invoke "org.example.Writer.write()" because "this.writer" is null
+
+    autowire="byType" If we failed to maintain unique id.
+    org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'org.example.Writer' available:
+    expected single matching bean but found 3: writer,p1,pc1
+
+    To avoid this exception we can use primary="true" in one of the bean definition
+    -->
+    <bean id="writer" class="org.example.Pen" primary="true">
     </bean>
 
     <bean id="p1" class="org.example.Pen">
