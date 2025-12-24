@@ -9,15 +9,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
-        //Without Spring Framework
-        //Student student = new Student();
-        //student.show();
+    public static void main( String[] args){
 
         ApplicationContext context = new ClassPathXmlApplicationContext("springconfig.xml");
-        //System.out.println( "Hello World!" );
-
         /*
             Student student = context.getBean(Student.class);
             student.show();
@@ -44,6 +38,5 @@ public class App
         Student helloWorld2 = (Student) context.getBean("helloWorld2");
         //helloWorld2.show();
         helloWorld2.writeExam();
-
     }
 }

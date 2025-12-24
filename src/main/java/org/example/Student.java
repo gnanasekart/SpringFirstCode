@@ -10,9 +10,11 @@ public class Student {
     private Writer writer;
 
     public void setWriter(Writer writer) {
-        System.out.println("setWriter method called");
+        //System.out.println("setWriter method called");
         this.writer = writer;
     }
+
+
 
     /**
      * Setter Injection
@@ -49,8 +51,15 @@ public class Student {
      }
     */
 
+    public Student(int age, int rollNo, Writer writer) {
+        System.out.println("Student Parameterized Constructor called");
+        this.age = age;
+        this.rollNo = rollNo;
+        this.writer = writer;
+    }
+
     public Student() {
-        System.out.println("Student Object Created");
+        //System.out.println("Student Object Created");
     }
 
     public void show() {

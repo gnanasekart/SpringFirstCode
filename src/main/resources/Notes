@@ -61,3 +61,16 @@ this autowire feature can be enabled in xml file using keyword autowire="byName"
    -> If there are multiple beans of that type in the container, we can use Primary param in bean tag to tell spring to use that bean as default
 
 
+## Constructor Injection
+-> create a class with private fields
+-> create a constructor with parameters for private fields
+-> Add the constructor-arg tag in xml file for each field with the name of the parameter
+-> create application context object in main method and get the bean
+-> call the methods using bean object
+
+## Constructor Injection with autowire
+-> create a class with private fields
+-> create a constructor with parameters for private fields if multiple constructors are there
+-> Add the autowire="constructor" in bean tag in xml file
+-> create application context object in main method and get the bean
+-> call the methods using bean object
