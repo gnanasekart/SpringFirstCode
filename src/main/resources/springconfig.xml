@@ -7,6 +7,12 @@
     </bean>
 
     <bean id="helloWorld2" class="org.example.Student">
+        <property name="age" value="25"/>
+        <property name="rollNo" value="101"/>
+        <property name="pen" ref="p1"/>
+    </bean>
+
+    <bean id="p1" class="org.example.Pen">
     </bean>
 
 </beans>

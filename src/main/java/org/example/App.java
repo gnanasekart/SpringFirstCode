@@ -16,7 +16,7 @@ public class App
         //student.show();
 
         ApplicationContext context = new ClassPathXmlApplicationContext("springconfig.xml");
-        System.out.println( "Hello World!" );
+        //System.out.println( "Hello World!" );
 
         /*
             Student student = context.getBean(Student.class);
@@ -42,8 +42,8 @@ public class App
          */
 
         Student helloWorld2 = (Student) context.getBean("helloWorld2");
-        helloWorld2.show();
-
+        //helloWorld2.show();
+        helloWorld2.writeExam();
 
     }
 }

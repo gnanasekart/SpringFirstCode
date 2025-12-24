@@ -26,4 +26,21 @@ IoC and Dependency Injection
 in Spring object == bean
 Application context also called as bean factory
 
+## Setter Injection
+1. create a class with private fields
+2. create setter methods for private fields
+3. Add the property tag in xml file for each field with the name of the setter method without 'set' prefix
+4. create application context object in main method and get the bean
+5. call the setter methods using bean object
+
+Similarly class object reference can be injected using setter injection
+6. create a Pen class with private field of another class type
+7. create setter method for that field
+8. Add the property tag in xml file for that field with the name of the setter method without 'set' prefix
+and give the ref attribute with the bean id of the class type
+9. create application context object in main method and get the bean
+10. call the setter methods using bean object
+
+## Autowired
+
 
