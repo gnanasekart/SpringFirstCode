@@ -7,6 +7,16 @@ public class Student {
     private int age;
     private int rollNo;
 
+    private Writer writer;
+
+    public void setWriter(Writer writer) {
+        System.out.println("setWriter method called");
+        this.writer = writer;
+    }
+
+    /**
+     * Setter Injection
+
     private Pen pen;
 
     public Pen getPen() {
@@ -34,6 +44,11 @@ public class Student {
         this.age = age;
     }
 
+     public void writeExam() {
+     pen.write();
+     }
+    */
+
     public Student() {
         System.out.println("Student Object Created");
     }
@@ -43,6 +58,6 @@ public class Student {
     }
 
     public void writeExam() {
-        pen.write();
+        writer.write();
     }
 }

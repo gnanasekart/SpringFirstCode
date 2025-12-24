@@ -41,6 +41,8 @@ and give the ref attribute with the bean id of the class type
 9. create application context object in main method and get the bean
 10. call the setter methods using bean object
 
-## Autowired
 
-
+## Loose Coupling
+-> using interface reference to refer the object of implementation class
+-> we can change the implementation class object without changing the code where it is used
+-> we can achieve loose coupling using Dependency Injection

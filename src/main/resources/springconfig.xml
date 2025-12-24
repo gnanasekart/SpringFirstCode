@@ -7,12 +7,25 @@
     </bean>
 
     <bean id="helloWorld2" class="org.example.Student">
-        <property name="age" value="25"/>
-        <property name="rollNo" value="101"/>
-        <property name="pen" ref="p1"/>
+<!--        <property name="age" value="25"/>-->
+<!--        <property name="rollNo" value="101"/>-->
+<!--        <property name="pen" ref="p1"/>-->
+
+        <!--
+        <property name="writer" ref="pc1"/>
+        these two property are consider like
+        Writer writer = new Pencil();
+        Writer writer = new Pen();
+        Interface type receiving the Impl object
+        -->
+        <property name="writer" ref="p1"/>
     </bean>
 
     <bean id="p1" class="org.example.Pen">
+    </bean>
+
+    <bean id="pc1" class="org.example.Pencil">
+
     </bean>
 
 </beans>
