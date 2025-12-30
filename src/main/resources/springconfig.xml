@@ -24,6 +24,12 @@
 <!--   <property name="writer" ref="p1"/>-->
     </bean>
 
+    <bean id="helloWorld3" class="org.springBased.StudentLombok" autowire="constructor">
+        <constructor-arg index="0" value="22"/>
+        <constructor-arg index="1" value="100"/>
+        <constructor-arg index="2" ref="writer"/>
+    </bean>
+
     <!-- autowire="byName" If the writer id is missing.
     NullPointerException = Cannot invoke "org.springBased.Writer.write()" because "this.writer" is null
 

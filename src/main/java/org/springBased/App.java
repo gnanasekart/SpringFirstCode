@@ -35,8 +35,12 @@ public class App
                 Hello Student show method called
          */
 
-        Student helloWorld2 = (Student) context.getBean("helloWorld2");
+        //Student helloWorld2 = (Student) context.getBean("helloWorld2");
         //helloWorld2.show();
-        helloWorld2.writeExam();
+        //helloWorld2.writeExam();
+
+        StudentLombok helloWorld3 = (StudentLombok) context.getBean("helloWorld3");
+        //helloWorld2.show();
+        helloWorld3.writeExam();
     }
 }
