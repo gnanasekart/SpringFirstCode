@@ -1,26 +1,27 @@
 package org.javaBasedConfiguration;
 
-import org.springBased.Writer;
+import org.javaBasedConfiguration.Writer;
 
 public class Student {
 
-    private int age;
     private int rollNo;
 
     private Writer writer;
 
+    public void setRollNo(int rollNo) {
+        this.rollNo = rollNo;
+    }
+
+    public  int getRollNo() {
+        return rollNo;
+    }
+
     public void setWriter(Writer writer) {
-        //System.out.println("setWriter method called");
         this.writer = writer;
     }
 
-
-
-    public Student(int age, int rollNo, Writer writer) {
-        System.out.println("Student Parameterized Constructor called");
-        this.age = age;
-        this.rollNo = rollNo;
-        this.writer = writer;
+    public Writer getWriter() {
+        return writer;
     }
 
     public Student() {
