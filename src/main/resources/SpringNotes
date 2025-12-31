@@ -2,12 +2,24 @@ In JVM there is a place called IoC Container which is created in JVM Heap memory
 Application Context is the type of IoC Container
 
 Dependency Injection in three different way
-1. field injection
+1. field injection - defining the dependency directly on the field like @Autowired and @Primary or @Qualifier
+
 @Autowired
 Student s;
 
-2. Constructor
-3. Setter
+2. Constructor injection - defining the @Autowired on top of the constructor
+    @Autowired
+    public Student(@Qualifier("pencil") Writer writer) {
+        System.out.println("Student Arg Constructor called");
+        this.writer = writer;
+    }
+
+3. Setter injection - defining the @Autowired on top of the setter method
+    @Autowired
+    @Qualifier("pencil")
+    public void setWriter(Writer writer) {
+        this.writer = writer;
+    }
 
 web application will have two main parts
 

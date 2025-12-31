@@ -23,3 +23,12 @@ Exception :-
     - To resolve this, you can use @Qualifier annotation to specify which bean to inject. --> First Priority is Qualifier
     @Qualifier("beanName")
     - Alternatively, you can mark one of the beans as @Primary to indicate that it should be the default choice. --> Second Priority is Primary
+
+
+Stereotype Annotations
+
+@Component: Generic stereotype for any Spring-managed component.
+@ComponentScan(basePackages = "com.example.package"): Specifies the packages to scan for annotated components.
+@Autowired: Marks a constructor, field, setter method, or config method to be autowired by Spring's dependency injection facilities.
+@Qualifier("beanName"): Specifies which bean to inject when multiple candidates are available.
+@Primary: Indicates that a bean should be given preference when multiple candidates are qualified to autowire a single-valued dependency.

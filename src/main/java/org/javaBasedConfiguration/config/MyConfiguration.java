@@ -1,17 +1,13 @@
 package org.javaBasedConfiguration.config;
 
-import org.javaBasedConfiguration.Pen;
-import org.javaBasedConfiguration.Pencil;
-import org.javaBasedConfiguration.Student;
-import org.javaBasedConfiguration.Writer;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 
 @Configuration
+@ComponentScan("org.javaBasedConfiguration")
 public class MyConfiguration {
 
+    /**
     @Bean
     //@Bean(name = "stud")
     //@Scope("singleton")
@@ -33,4 +29,7 @@ public class MyConfiguration {
     public Pencil pencil(){
         return new Pencil();
     }
+
+    */
+
 }

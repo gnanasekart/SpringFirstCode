@@ -1,5 +1,8 @@
 package org.javaBasedConfiguration;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Pencil implements Writer {
 
     public Pencil() {
